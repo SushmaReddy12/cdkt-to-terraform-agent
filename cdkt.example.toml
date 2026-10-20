@@ -1,0 +1,25 @@
+# Copy to cdkt.toml (safe to commit - never put credentials here).
+# Precedence: defaults < this file < CDKT_* env vars < CLI flags.
+[cdkt]
+model = "claude-opus-5"
+effort = "high"             # low | medium | high | xhigh | max
+max_tokens = 64000
+parallel = 4
+max_turns = 80
+
+aws_provider_version = "~> 6.0"
+emit_imports = true
+run_terraform = true
+
+# Your organisation's conventions, fed to every agent (paths relative to this file).
+# extra_knowledge = ["docs/terraform-conventions.md"]
+
+# Beta features; turn off if your platform/account rejects them.
+use_fallbacks = true
+use_compaction = true
+
+# Which environment variable holds the key (the key itself stays in the environment).
+api_key_env = "ANTHROPIC_API_KEY"
+# base_url = "https://my-gateway.example.com"
+timeout_seconds = 900
+max_retries = 4

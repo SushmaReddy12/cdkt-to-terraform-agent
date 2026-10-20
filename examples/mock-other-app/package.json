@@ -1,0 +1,9 @@
+{
+  "name": "mock-other-app",
+  "version": "1.0.0",
+  "description": "A random Node.js app with no IaC files.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
